@@ -21,8 +21,6 @@ public class PrimesTest {
 
 		System.out.println("Is the number " + numberToBeChecked + " prime? " + (result ? "Yes" : "No"));
 		
-		if (!result) {
-			System.out.println("The smallest nontrivial divisor of " + numberToBeChecked + " is " + checker.smallestDivisor);
-		}
+		// for non-prime numbers, can we know which is the smallest nontrivial divisor of numberToBeChecked?
 	}
 }

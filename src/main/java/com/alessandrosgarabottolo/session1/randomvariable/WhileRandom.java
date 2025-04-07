@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * This class uses a do...while loop and a random number generator to
- * count how many times we flip a coin before obtaining tail.
+ * count how many times we flip a coin before getting tail.
  *
  * Original author: Andrea Mazzon
  * Modified by: Alessandro Sgarabottolo
@@ -25,15 +25,9 @@ public class WhileRandom {
 		 * generator will always produce the same sequence for a particular seed value
 		 */
 		do {
-			numberOfFlips++; // first you flip!
+			numberOfFlips++; // first you flip! Would it change if we wrote ++numberOfFlips?
 			System.out.println("I flipped the coin " + numberOfFlips + " times");
 		} while (randomNumberGenerator.nextInt(2) == 1); // 0 is tail, 1 is head
-	
-//		numberOfFlips = 1;
-//		while (randomNumberGenerator.nextInt(3)!=2) {
-//			System.out.println("I flipped the coin " + numberOfFlips + " times");
-//			numberOfFlips++;
-//		}
 		
 		// nextInt(n) produces a random natural number (0 included) smaller than n
 		System.out.println("I got tail after " + numberOfFlips + " flips");

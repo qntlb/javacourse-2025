@@ -47,7 +47,7 @@ public class ARandomSwitch {
 		default: // if no match occurs
 			System.out.println("The selected number is odd ");
 			/*
-			 * The last statement, following the default, doesn’t need a break because the
+			 * The statement following the default doesn’t need a break because the
 			 * execution of the switch statement ends anyway.
 			 * One could put a break at the end of the default statement and the result would be the same.
 			 */

@@ -12,26 +12,29 @@ package com.alessandrosgarabottolo.session1.elevator;
 public class Elevator {
 
 	public static void main(String[] args) {
-		
-		for (int floor = 10 /* initialization */; floor > 0 /* Boolean expression */; floor-- /* step */) {
+		/*
+		 * Note the syntax of the for loop: (initialization, boolean expression, step)
+		 */
+		for (int floor = 10; floor > 0; floor--) {
 			System.out.println("The elevator is at floor number " + floor);
 		}
-
-		// System.out.println(floor);//ERROR!
-		System.out.println();
+		
+		System.out.println();		
 		
 		System.out.println("The elevator is at ground level");
+		
+//		System.out.println(floor);//ERROR!
+		
 		System.out.println();
-		// you could also write:
+		// TODO: rewrite the same with a while loop
 		int i = 10;
 		while (i > 0) {
-			System.out.println("The elevator is at floor number " + i);
-			i--;
+			// your implementation
 		}
 		
-		System.out.println();
-		
-		System.out.println("i is equal to " + i + " after the end of the while loop");
+//		System.out.println();
+//		
+//		System.out.println("i is equal to " + i + " after the end of the while loop");
 		/*
 		 * The difference is that since i is initialized before the while loop it remains in the memory.
 		 * If you create a variable inside the while loop, it gets deleted after the while.

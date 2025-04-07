@@ -22,8 +22,7 @@ public class Comparison {
 	 * @param rightEnd:     right boundary of the interval
 	 * @return {@code true} if {@code testedNumber} is inside the interval, {@code false} if not
 	 */
-	boolean isInside(double testedNumber,
-			double leftEnd, double rightEnd) {
+	boolean isInside(double testedNumber, double leftEnd, double rightEnd) {
 		if (testedNumber < leftEnd || testedNumber > rightEnd) {
 			/*
 			 * the return keyword has two purposes: it specifies what value a method will
@@ -79,4 +78,6 @@ public class Comparison {
 		int resultAsInteger = (testedNumber >= leftEnd & testedNumber <= rightEnd) ? 1 : 0;
 		return resultAsInteger;
 	}
+	
+	// TODO: write a one-line method isInsideWithTernary which uses a ternary operator to return a boolean
 }

@@ -13,7 +13,7 @@ package com.alessandrosgarabottolo.session1.gauss;
 public class SumOfIntegers {
 
 	/**
-	 * Compute the sum of natural numbers form 1 to lastNumber, with a for loop. As an extra, it also prints
+	 * Compute the sum of natural numbers from 1 to lastNumber, with a for loop. As an extra, it also prints
 	 * all those numbers.
 	 *
 	 * @param lastNumber: final number of the sum
@@ -21,16 +21,12 @@ public class SumOfIntegers {
 	 */
 	int sumUpToNumber(int lastNumber) {
 		int sum = 0;
-		System.out.println("Looping...");
-		for (int i = 1; i <= lastNumber; i++) {
-			System.out.print(i + " "); // Using print instead of println avoids line breaks
-			sum += i; //sum = sum + i;
-		}
+		// TODO: implement the method. Hint: to increase sum by a number you can use sum = sum + number or sum += number.
 		return sum;
 	}
 	
 	/**
-	 * Compute the sum of natural numbers form 1 to lastNumber, using Gauss formula. 
+	 * Compute the sum of natural numbers from 1 to lastNumber, using Gauss formula. 
 	 *
 	 * @param lastNumber: final number of the sum
 	 * @return the sum from 1 to lastNumber
