@@ -29,6 +29,7 @@ public class Testing {
 		int isInsideAsInt = tester.isInsideAsInt(testedNumber, leftEnd, rightEnd);
 		System.out.println("\nThe result of the test as an integer is: " + isInsideAsInt);
 		
-		// TODO: test the method isInsideWithTernary
+		boolean isInsideWithTernary = tester.isInsideWithTernary(testedNumber, leftEnd, rightEnd);
+		System.out.println("\nThe result of the test as an integer is: " + isInsideWithTernary);
 	}
 }

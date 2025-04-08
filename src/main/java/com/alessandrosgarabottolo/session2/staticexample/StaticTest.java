@@ -48,7 +48,9 @@ public class StaticTest {
 		System.out.println("\n");
 
 		/*
-		 *  What happens if we now create a new object? Which value for the static field do we expect?
+		 *  Also new objects of that class will have the same static variable: again, all the instances of
+		 *  the class will have the same value for the static variable. It makes sense: the variable
+		 *  "has not to know" which object is working for.
 		 */
 		StaticExample thirdObject = new StaticExample();
 		thirdObject.printFields();

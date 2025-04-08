@@ -49,7 +49,11 @@ public class Tree {
 		 * int, long, float, double.
 		 */
 		System.out.println("The tree is " + height + " meters high");
-	
+		
+		// try instead
+		//int a;
+		//System.out.println(a);
+		//error!	
 	}
 	
 }

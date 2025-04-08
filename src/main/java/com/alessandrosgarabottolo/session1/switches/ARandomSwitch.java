@@ -21,7 +21,8 @@ public class ARandomSwitch {
 		System.out.println("The generated number is " + switchValue);
 		System.out.println();
 		
-		switch (switchValue /* integer between 0 and 6 */ ) {
+		/* integer between 0 and 6 */
+		switch (switchValue) {
 		/*
 		 * The switch statement compares the value of switchValue to each value listed below.
 		 * If it finds a match, the corresponding statement executes. If no match

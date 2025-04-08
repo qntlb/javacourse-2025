@@ -29,12 +29,17 @@ public class Elevator {
 		// TODO: rewrite the same with a while loop
 		int i = 10;
 		while (i > 0) {
-			// your implementation
+			System.out.println("The elevator is at floor number " + i);
+			i--;
 		}
 		
-//		System.out.println();
-//		
-//		System.out.println("i is equal to " + i + " after the end of the while loop");
+		System.out.println();		
+		
+		System.out.println("The elevator is at ground level");
+		
+		System.out.println();
+		
+		System.out.println("i is equal to " + i + " after the end of the while loop");
 		/*
 		 * The difference is that since i is initialized before the while loop it remains in the memory.
 		 * If you create a variable inside the while loop, it gets deleted after the while.

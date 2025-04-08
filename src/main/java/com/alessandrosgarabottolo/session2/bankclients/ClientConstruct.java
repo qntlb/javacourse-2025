@@ -24,15 +24,19 @@ public class ClientConstruct {
 		 * same! It is basically the one returned by the static method createNewClient.
 		 * Then we can perform multiple calling.
 		 */
-		// TODO: initialize the client with the constructor with all the arguments
-//		Client schneider = Client.createNewClient("00011100").name("Schneider").advisor("Smith")
-//				.nationality("German").cityOfResidence("Munich").age(37).
-//				riskAversionIndex(0.4).sumInvested(1E4).hasInsurance(true);
-		Client schneider = Client.createNewClient("00011100").advisor("Smith")
+//		Client schneiderDirect = new Client("00011100", "Schneider", "Smith", "German","Munich", 37, 0.4, 1E4, true);
+		Client schneiderDirect = new Client("Schneider", "00011100", "Smith", "German","Munich", 37, 0.4, 1E4, true); // such a mistake in the initialization is very common
+		Client schneiderBuildingPattern = Client.createNewClient("00011100").name("Schneider").advisor("Smith")
 				.nationality("German").cityOfResidence("Munich").age(37).
-				riskAversionIndex(0.4).sumInvested(1E4).hasInsurance(true).name("Schneider"); // changing the order in the building pattern does not affect the final object
+				riskAversionIndex(0.4).sumInvested(1E4).hasInsurance(true);
+//		Client schneiderBuildingPattern = Client.createNewClient("00011100").advisor("Smith")
+//				.nationality("German").cityOfResidence("Munich").age(37).
+//				riskAversionIndex(0.4).sumInvested(1E4).hasInsurance(true).name("Schneider"); // changing the order in the building pattern does not affect the final object
+
+		schneiderDirect.printName();
+		schneiderDirect.printNationality();
 		
-		schneider.printName();
-		schneider.printNationality();	
+		schneiderBuildingPattern.printName();
+		schneiderBuildingPattern.printNationality();	
 	}
 }

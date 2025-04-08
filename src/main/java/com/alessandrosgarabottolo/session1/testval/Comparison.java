@@ -80,4 +80,7 @@ public class Comparison {
 	}
 	
 	// TODO: write a one-line method isInsideWithTernary which uses a ternary operator to return a boolean
+	boolean isInsideWithTernary(double testedNumber, double leftEnd, double rightEnd) {
+		return (testedNumber >= leftEnd & testedNumber <= rightEnd) ? true : false;
+	}
 }

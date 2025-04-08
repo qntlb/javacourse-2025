@@ -2,8 +2,8 @@ package com.alessandrosgarabottolo.session2.triangleperimeter;
 
 /**
  * In this class we see an example of how methods overloading can help us making
- * the life of the user easier: we write a method to compute the perimeter of a triangle.
- * The general formula would of course
+ * the life of somebody using our class easier if possible: here we write a method
+ * to compute the perimeter of a triangle, so the general formula would of course
  * ask us to sum the length of the three sides. However, we maybe don't want somebody 
  * to give the length of all the three sides if we know they have equal length!
  * On the other hand, it would not make sense to call the method differently if it does
@@ -21,9 +21,12 @@ public class PerimeterCalculator {
 
 	/*
 	 * Most "general" implementation: case where the sides have all different
-	 * length
+	 * length, scalene triangle
 	 */
-	// TODO: write the method computePerimeter in the case where three arguments of type double are passed
+	double computePerimeter(double firstSideLength, double secondSideLength, double thirdSideLength) {
+		double perimeter = firstSideLength + secondSideLength + thirdSideLength;
+		return perimeter;
+	}
 
 	/*
 	 * isosceles triangle: you see that it would not make sense to call this method
@@ -35,6 +38,9 @@ public class PerimeterCalculator {
 	}
 
 	// equilateral triangle
-	// TODO: write the overloading method where only one side is passed, which implicitly means that the triangle is equilateral.
+	double computePerimeter(double sidesLength) {
+		double perimeter = sidesLength * 3;
+		return perimeter;
+	}
 
 }
