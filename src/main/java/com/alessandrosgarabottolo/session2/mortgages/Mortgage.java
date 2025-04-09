@@ -32,8 +32,20 @@ public class Mortgage {
 		System.out.println("The name of our new customer is " + name + ". He is " + age + " years old."
 				+ " We lend him/her " + amount + " euros.");
 
-		// TODO: complete the method to give a warning when the total amount loaned passes 1E6
+		loansSum += amount; // the field is incremented, and will be the same for every Mortgage object
+		// or loansSum = loansSum + amount;
 
+		System.out.println("Sum of all the loans : " + loansSum);
+		System.out.println();
+
+		
+		// We want to known when we have exceed the total amount of money we want to lend
+		if (loansSum > 1E6) {// 1 million
+			System.out.println("Enough!");
+			/*
+			 * We will see next time how to prevent the user to construct more objects of
+			 * this type (for now we can just warn him/her)
+			 */
 		}
 	}
 

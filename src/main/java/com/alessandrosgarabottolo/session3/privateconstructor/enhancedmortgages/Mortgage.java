@@ -18,16 +18,48 @@ public class Mortgage {
 
 	private static double loansSum = 0; // static: shared by all the objects. Initially zero.
 	private static double budget = 1E6;
-	private String name; // this field is not meant to be static: it must be able to vary for every customer
+	// this field is not meant to be static: it must be able to vary for every customer
+	private String name;
 	private int age; // non static, for the same reason
 	private double amount; // same thing
 
-	
-	/*
-	 * TODO: write a private constructor Mortgage(String name, int age, double amount)
-	 * and a public static method constructMortgage(...) which returns an object of type Mortgage if
-	 * the total amount loaned is below the budget. For the constructor you can look at
-	 * com.alessandrosgarabottolo.session2.mortgages.Mortgage
-	 */
+	// constructor
+	private Mortgage(String name, int age, double amount) {
+		this.name = name; // note the use of this
+		this.age = age;
+		this.amount = amount;
 
+		System.out.println("The name of our new customer is " + name + ". He/she is " + age + " years old."
+				+ " We lend him/her " + amount + " euros.");
+
+		System.out.println("Sum of all the loans : " + loansSum);
+		System.out.println();
+	}
+
+	/**
+	 * It returns an object of type Mortgage if the former value of loansSum plus amount is less or equal than
+	 * maximumBudget.
+	 *
+	 * @param name, the name of the new client
+	 * @param age, the age of the new client
+	 * @param amount, the amount of money we lend to the new client
+	 * @return a reference to the new object
+	 */
+	/*
+	 * Static: its implementation does not depend on non static fields and non static methods of the class.
+	 * It has to be static because we want to call it in order to construct a new object of the class, and in
+	 * order to do that we cannot need an object of the class itself.
+	 */
+	public static Mortgage constructMortgage(String name, int age, double amount) {
+
+		if (loansSum + amount <= budget) {
+			loansSum += amount; //the field is immediately incremented, and is the same for every Mortgage object
+			//the private constructor is called, from inside the class: fine
+			Mortgage newMortgage = new Mortgage(name, age, amount);
+			return newMortgage;
+		}
+		System.out.println("Mortgage rejected, we have excedeed the budget");
+		//we have to return an object of type Mortgage, but we don't want to construct any! A solution is to return null
+		return null;
+	}
 }

@@ -25,21 +25,21 @@ public class Gas {
 	
 	private final static double gayLussacConstant = 8.3145; // final keyword: the value of this field cannot be modified
 
-	/*
-	 * TODO: write the private method kelvinToFahreneit recalling the formula
-	 * F = C * 9/5 + 32, where F is Fahreneit and C is celsius. Also remember that C = K - 273.15
-	 */
-	
-	/*
-	 * TODO: write the private method fahreneitToKelvin
-	 */
+	private static double kelvinToFahrenheit(double temperatureKelvin) { // Transformations for outputs
+		return (temperatureKelvin - 273.15) * 9 / 5 + 32;
+	}
+
+	private static double fahrenheitToKelvin(double temperatureFahrenheit) { // Transformation for inputs
+		return (temperatureFahrenheit - 32) * 5 / 9 + 273.15;
+	}
 
 	/*
 	 * getter of the temperature: the conversion from Kelvin to Fahreneit has to be
 	 * performed (we work with Kelvin, the client wants to read Fahreneit)
 	 */
 	public double getTemperature() {
-		// TODO: implement the method
+		double temperatureFahrenheit = kelvinToFahrenheit(temperatureKelvin);
+		return temperatureFahrenheit;
 	}
 
 	/*
@@ -47,7 +47,8 @@ public class Gas {
 	 * performed (we work with Kelvin, the client wants to set Fahreneit)
 	 */
 	public void setTemperature(double temperature) {
-		// TODO: implement the method so that a message with the new temperature in Kelvin is printed
+		temperatureKelvin = fahrenheitToKelvin(temperature);
+		printn("The temperature in Kelvin is now " + temperatureKelvin);
 	}
 
 	// Calculates pressure- Gay Lussac Law. The temperature has to be in Kelvin
