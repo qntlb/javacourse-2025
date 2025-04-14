@@ -25,7 +25,10 @@ public class Sportsman {
 	}
 	
 	/*
-	 * TODO: write a constructor with no arguments that can be called from the constructor
-	 * of the derived class without using "super".
+	 * If we also write a default constructor, we can call it from the derived class
+	 * without using the method super().
 	 */
+	Sportsman() {
+		printn("I am a sportsman, my name is not that important");
+	}
 }

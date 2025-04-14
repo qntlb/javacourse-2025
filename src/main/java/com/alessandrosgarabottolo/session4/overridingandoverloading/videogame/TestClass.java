@@ -32,7 +32,13 @@ public class TestClass {
 		//you will see that now the damages are higher: the overridden version is called
 		System.out.println("And now, " + enemyWarrior.getHealthPoints() + " health points");
 		
-		// TODO: write a for loop to kill the enemy warrior and check if it is dead
+		// we kill the enemy warrior
+		while(enemyWarrior.getHealthPoints() > 0) {
+			morePowerfulWarrior.inflictDamage(enemyWarrior);
+//			System.out.println("The enemy has now " + enemyWarrior.getHealthPoints() + " health points");
+		}
+		
+		enemyWarrior.checkIfDead();
 
 		System.out.println();
 		
