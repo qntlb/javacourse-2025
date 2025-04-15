@@ -10,4 +10,4 @@
  * @author Andrea Mazzon
  * @author Alessandro Sgarabottolo
  */
-package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.band;
+package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.orchestra;

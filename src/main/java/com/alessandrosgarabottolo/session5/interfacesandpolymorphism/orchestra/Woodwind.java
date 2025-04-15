@@ -1,4 +1,4 @@
-package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.band;
+package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.orchestra;
 
 /**
  * This class extends Wind, so it implicitly implement Instrument.

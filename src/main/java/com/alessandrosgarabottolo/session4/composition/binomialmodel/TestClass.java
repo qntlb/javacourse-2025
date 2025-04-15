@@ -21,12 +21,13 @@ public class TestClass {
 
 		int seed = 1897;
 		int lastTime = 10;
-		int numberOfSimulations = 100;
+		int numberOfSimulations = 100000;
 		int simulationIndex = 10;
 
 		BinomialModelSimulator tester = new BinomialModelSimulator(initialValue, increaseIfUp, decreaseIfDown, interestRate, seed,
 				lastTime, numberOfSimulations);
 
+		System.out.println("The probability of a step up in this model is: " + tester.getRiskNeutralProbabilityUp());
 		System.out.println("Path for simulation number " + simulationIndex + ":");
 		tester.printPath(simulationIndex);
 
@@ -38,7 +39,7 @@ public class TestClass {
 
 		System.out.println();
 		
-		double discountFactor = Math.pow(1+interestRate, -lastTime);
+		double discountFactor = Math.pow(1 + interestRate, -lastTime);
 		double discountedAverage = discountFactor * finalAverage;
 		System.out.println("Average of the discounted process at time " + lastTime + ": " + discountedAverage);
 	}

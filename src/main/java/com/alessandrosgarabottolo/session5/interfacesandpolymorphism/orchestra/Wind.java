@@ -1,4 +1,4 @@
-package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.band;
+package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.orchestra;
 
 /**
  * Class implementing the interface Instrument: it must implement the method

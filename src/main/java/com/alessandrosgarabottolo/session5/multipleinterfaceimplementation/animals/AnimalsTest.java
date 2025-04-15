@@ -23,6 +23,6 @@ public class AnimalsTest {
 		makeFly(anEagle);// upcasting
 		makeFly(aDuck);// upcasting
 		makeSwim(aDuck);// upcasting
-//		aDuck.eat();
+		aDuck.eat();
 	}
 }

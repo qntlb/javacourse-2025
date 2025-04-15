@@ -7,7 +7,7 @@ import com.alessandrosgarabottolo.session4.usefulmatrices.UsefulMethodsMatricesV
  * This class is used in order to simulate some paths of a binomial model, get  the value of the
  * process at given times and for some paths and to compute the average at some times.
  * The binomial model is a discrete model for a stochastic process S, such that every time i we have
- * S(i+1)=S(i)*M(i), where M(i)=u>1+r with probability p and M(i)=d<1+r with probability 1-p,
+ * S(i+1)=S(i) * M(i), where M(i)=u>1+r with probability p and M(i)=d<1+r with probability 1-p,
  * where r is the risk free interest rate.
  * The simulation is performed under the risk neutral measure: standard math finance results show that
  * it must hold
@@ -56,6 +56,11 @@ public class BinomialModelSimulator {
 		this(initialValue, increaseIfUp, decreaseIfDown, 0, seed, lastTime, numberOfSimulations);
 	}
 
+	public BinomialModelSimulator(double initialValue, double increaseIfUp, double decreaseIfDown,
+			double interestRate, int lastTime, int numberOfSimulations) {
+		this(initialValue, increaseIfUp, decreaseIfDown, interestRate, 1897, lastTime, numberOfSimulations);
+	}
+	
 	// overloaded constructor: if not specified, the seed is 1897
 	public BinomialModelSimulator(double initialValue, double increaseIfUp, double decreaseIfDown, int lastTime,
 			int numberOfSimulations) {
@@ -85,7 +90,7 @@ public class BinomialModelSimulator {
 		for (int timeIndex = 0; timeIndex < lastTime; timeIndex++) {
 			for (int simulationIndex = 0; simulationIndex < numberOfSimulations; simulationIndex++) {
 				// we have converted the probability into a condition on the generated numbers
-				if (randomGenerator.getNextInteger() < threshold) {
+				if (randomGenerator.getNextInteger() <= threshold) {
 					upsAndDowns[timeIndex][simulationIndex] = increaseIfUp;
 				} else {
 					upsAndDowns[timeIndex][simulationIndex] = decreaseIfDown;
@@ -176,5 +181,9 @@ public class BinomialModelSimulator {
 	 */
 	public double getAverageAtGivenTime(int time) {
 		return UsefulMethodsMatricesVectors.getAverage(getRealizationsAtGivenTime(time));
+	}
+	
+	public double getRiskNeutralProbabilityUp() {
+		return riskNeutralProbabilityUp;
 	}
 }

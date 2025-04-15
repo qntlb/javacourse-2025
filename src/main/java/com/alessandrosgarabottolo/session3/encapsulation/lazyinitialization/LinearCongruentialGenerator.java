@@ -5,7 +5,7 @@ package com.alessandrosgarabottolo.session3.encapsulation.lazyinitialization;
  * random number generator: as you will see, a linear congruential random number
  * generator produces natural numbers
  *
- * x[i+1] =(a*x[i] + c) mod_m,
+ * x[i+1] =(a * x[i] + c) mod_m,
  *
  * where x[0] = seed, for appropriate values of natural numbers a, c and m
  * (for big m). You will see that it is not optimal because the numbers exhibit

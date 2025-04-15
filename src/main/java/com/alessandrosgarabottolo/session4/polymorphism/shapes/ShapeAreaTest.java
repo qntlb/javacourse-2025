@@ -33,7 +33,7 @@ public class ShapeAreaTest {
 		double radiusOfCircle = 11;
 		
 		double numberOfShapes = 10;
-
+		
 		RandomShapeGenerator generator = new RandomShapeGenerator(basisOfTriangle, heightOfTriangle,
 				sideOfSquare, radiusOfCircle);
 

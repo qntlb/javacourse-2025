@@ -1,4 +1,4 @@
-package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.band;
+package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.orchestra;
 
 /**
  * This interface is implemented by Wind and Percussion. Woodwind extends Wind, so it also

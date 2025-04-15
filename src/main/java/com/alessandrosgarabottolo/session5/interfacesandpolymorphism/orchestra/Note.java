@@ -1,4 +1,4 @@
-package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.band;
+package com.alessandrosgarabottolo.session5.interfacesandpolymorphism.orchestra;
 
 /**
  * Note is an enum type: it is useful when you have to group together and use a

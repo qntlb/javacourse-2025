@@ -8,7 +8,7 @@ package com.alessandrosgarabottolo.session5.nomultipleinheritance;
  * public class DerivedClass extends FirstParentClass, SecondParentClass
  * even if there was no conflict.
  */
-public class DerivedClass extends FirstParentClass  {
+public class DerivedClass extends FirstParentClass{
 
 	/*
 	 * This class has no constructor, therefore, the default one is called.
@@ -19,6 +19,7 @@ public class DerivedClass extends FirstParentClass  {
 		System.out.println("A method of the derived class");
 	}
 	
+	@Override
 	public void abstractMethod() {
 		System.out.println("Implementation of the abstract method");
 	}

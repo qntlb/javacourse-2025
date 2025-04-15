@@ -27,6 +27,9 @@ public class ShapeTest {
 		
 		int numberOfShapes = 10;
 
+//		Shape generalShape = new Shape(); // it is not possible to instantiate an object of type Shape
+//		Shape triangle = new Triangle(basisOfTriangle, heightOfTriangle); // this is ok
+		
 		RandomShapeGenerator generator = new RandomShapeGenerator(basisOfTriangle, heightOfTriangle, sideOfSquare,
 				radiusOfCircle);
 

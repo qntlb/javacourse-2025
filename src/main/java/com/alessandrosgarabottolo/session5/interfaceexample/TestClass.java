@@ -33,6 +33,7 @@ public class TestClass {
 		System.out.println();
 		// but in order to call the doctor specific method. We have to downcast
 		((Doctor) doctorCox).aDoctorMethod();
+//		((Doctor) mcAfee).aDoctorMethod(); error in the downcasting
 	}
 
 }

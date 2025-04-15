@@ -20,7 +20,7 @@ public class Duck implements AnimalThatSwims, AnimalThatFlies {
 	@Override
 	public void eat() {// methods defined in the interface must be public!
 		System.out.println("A duck eats");
-		System.out.println(interfaceField); //POSSIBLE CONFLICT!
+//		System.out.println(interfaceField); //POSSIBLE CONFLICT!
 //		interfaceField = 12; //not possible! It is implicitly final
 	}
 }
