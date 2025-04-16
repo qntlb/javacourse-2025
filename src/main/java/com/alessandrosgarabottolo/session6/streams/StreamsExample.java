@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import java.util.ArrayList;
 
 /**
  * This class shows some examples of uses of Streams. This is an useful tool as it permits
@@ -34,13 +33,10 @@ public class StreamsExample {
 		 * a kind of "factory" that produces more streams with same elements.
 		 */
 		
-		/*
-		 * note how to convert an array into a stream. You can also look at the source code
-		 * of Supplier to understand what is happening here: we are implementing a functional interface.
-		 */
+		//note how to convert an array into a stream.
 		Supplier<Stream<Double>> streamSupplier  = () -> Arrays.stream(arrayToBeFilled);
 
-		// note how to create a stream from a stream supplier
+		//note how to create a stream from a stream supplier
 		Stream<Double> firstStream = streamSupplier.get();
 		
 		//how to print a Stream

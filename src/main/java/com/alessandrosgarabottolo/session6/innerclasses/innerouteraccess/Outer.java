@@ -25,6 +25,9 @@ public class Outer {
 
 	/**
 	 * Inner class of an outer class. It can access its private field.
+	 *
+	 * @author Andrea Mazzon
+	 *
 	 */
 	public class Inner {		
 		private int innerField = 8;// its own private field

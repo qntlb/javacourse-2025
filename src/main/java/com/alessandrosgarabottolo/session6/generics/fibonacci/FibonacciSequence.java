@@ -17,14 +17,20 @@ public class FibonacciSequence implements GenericNext<Long> { // The type return
 	private Long fibonacciSum;
 	
 	/**
-	 * It returns the Fibonacci number F_k = F_{k-1} + F_{k-2}, k=count where count is a field of the
-	 * class, and set count = count + 1. Recall F_1 = F_2 = 1.
+	 * It returns the Fibonacci number F_k, k=count where count is a field of the
+	 * class, and set count = count + 1.
 	 */
 	@Override
 	public Long next() {
-		/*
-		 * TODO: write the implementation of the method
-		 */
+		if (count < 3) {
+			count ++;
+			return 1L;
+		}
+		
+		fibonacciSum = firstFibonacciNumber + secondFibonacciNumber;
+		firstFibonacciNumber = secondFibonacciNumber;
+		secondFibonacciNumber = fibonacciSum;
+		count++;
 		return fibonacciSum;
 	}
 	

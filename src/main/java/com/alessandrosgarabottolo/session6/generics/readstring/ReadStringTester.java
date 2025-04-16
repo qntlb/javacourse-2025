@@ -11,6 +11,6 @@ public class ReadStringTester {
 		while (readString.checkIfNotAtTheEnd()/* boolean, true as long as we are not at the end of the string */) {
 			System.out.println(readString.next());
 		}
-//		System.out.println(readString.next()); // note which error you get if you ask for one more character
+//		System.out.println(readString.next()); // see what happens if we uncomment this line
 	}
 }
